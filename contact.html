@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | NestMarket</title>
+  <meta name="description" content="Get in touch with the NestMarket team. We are here to help with any questions, support requests, or feedback.">
+  <link rel="canonical" href="https://www.nestmarket.example/contact.html">
+  <meta name="theme-color" content="#6B4F3A">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="./favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { walnut: '#6B4F3A', sand: '#E8DCC8', charcoal: '#1F2933', terracotta: '#C47A44' },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'], display: ['"DM Sans"', 'Inter', 'ui-sans-serif', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-white font-sans text-charcoal antialiased">
+
+  <a href="#main" class="sr-only-focusable sr-only rounded-lg bg-white px-4 py-2 text-sm font-semibold shadow-lg focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100]">Skip to main content</a>
+
+  <div id="navbar"></div>
+
+<main id="main">
+    <!-- ================= HERO BANNER ================= -->
+    <section class="relative flex min-h-[100vh] flex-col justify-center overflow-hidden border-b border-[#EAE1D2] bg-sand/70" aria-labelledby="hero-title">
+      <div class="relative mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
+          <div class="anim-fade-up">
+            <span class="chip bg-white/80 text-[#6B4F3A] ring-1 ring-[#6B4F3A]/15">
+              <span class="status-dot bg-terracotta"></span> We're here for you
+            </span>
+            <h1 id="hero-title" class="mt-5 font-display text-4xl font-bold leading-[1.08] tracking-tight text-charcoal sm:text-5xl lg:text-[3.4rem]">
+              We'd love to <span class="text-terracotta">hear from you</span>
+            </h1>
+            <p class="mt-5 max-w-xl text-[#4B5563] sm:text-lg leading-relaxed">
+              Whether you have a question about features, pricing, or anything else, our team is ready to answer all your questions.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="#contact-heading" class="inline-flex h-[52px] items-center justify-center rounded-xl bg-walnut px-8 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#56402E] hover:shadow-lg hover:shadow-walnut/25">
+                Send a Message
+              </a>
+              <a href="mailto:support@nestmarket.example" class="inline-flex h-[52px] items-center justify-center rounded-xl border-2 border-walnut/20 px-8 font-semibold text-charcoal transition-colors hover:border-walnut hover:bg-walnut/5">
+                Email Support
+              </a>
+            </div>
+            <div class="mt-10 flex flex-wrap items-center gap-6 border-t border-[#EAE1D2] pt-6 text-sm font-medium text-[#4B5563]">
+              <div class="flex items-center gap-2">
+                <svg class="h-5 w-5 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Free Support
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="h-5 w-5 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                24/7 Response Time
+              </div>
+            </div>
+          </div>
+          <div class="relative anim-fade-up mt-8 lg:mt-0" style="animation-delay:.12s">
+            <div class="img-zoom overflow-hidden rounded-3xl shadow-2xl shadow-[#6B4F3A]/25 aspect-video lg:aspect-[4/3] max-h-[45vh] lg:max-h-[60vh]">
+              <img src="images\img1.avif" alt="Customer Support Team" class="h-full w-full object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT FORM & INFO ================= -->
+    <section class="relative bg-sand/30 py-16 lg:py-24" aria-labelledby="contact-heading">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-2 lg:gap-16">
+          
+          <!-- Left: Contact Info -->
+          <div class="anim-fade-up lg:self-center">
+            <h2 id="contact-heading" class="font-display text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+              Get in <span class="text-terracotta">touch</span>
+            </h2>
+            <p class="mt-4 text-[#4B5563] sm:text-lg">
+              Have a question about a listing, need help with your account, or just want to share some feedback? Fill out the form or reach us directly.
+            </p>
+
+            <div class="mt-12 grid gap-8 sm:grid-cols-2">
+              <div>
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-walnut text-white shadow-md">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <h3 class="mt-4 font-display font-bold text-charcoal">Email Us</h3>
+                <p class="mt-1 text-sm text-[#4B5563]">We'll respond within 24 hours.</p>
+                <a href="mailto:support@nestmarket.example" class="mt-2 inline-block font-semibold text-terracotta hover:underline">support@nestmarket.demo</a>
+              </div>
+              <div>
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-walnut text-white shadow-md">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <h3 class="mt-4 font-display font-bold text-charcoal">Call Us</h3>
+                <p class="mt-1 text-sm text-[#4B5563]">Mon-Fri from 9am to 6pm.</p>
+                <a href="tel:+918001234567" class="mt-2 inline-block font-semibold text-terracotta hover:underline">+91 800 123 4567</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <div class="anim-fade-up mt-4 lg:mt-0" style="animation-delay:.15s">
+            <div class="rounded-3xl border border-[#EAE1D2] bg-white p-6 shadow-xl shadow-[#6B4F3A]/5 sm:p-10">
+              <h2 class="font-display text-2xl font-bold text-charcoal">Send a Message</h2>
+              <form id="contact-form" class="mt-8 space-y-6" onsubmit="event.preventDefault(); alert('Thanks for reaching out!'); this.reset();">
+                <div class="grid gap-6 sm:grid-cols-2">
+                  <div>
+                    <label for="contact-name" class="nm-label">Full Name</label>
+                    <input type="text" id="contact-name" class="nm-input w-full" placeholder="John Doe" required>
+                  </div>
+                  <div>
+                    <label for="contact-email" class="nm-label">Email Address</label>
+                    <input type="email" id="contact-email" class="nm-input w-full" placeholder="john@example.com" required>
+                  </div>
+                </div>
+                <div>
+                  <label for="contact-subject" class="nm-label">Subject</label>
+                  <select id="contact-subject" class="nm-input w-full bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%208l5%205%205-5%22%20stroke%3D%22%234B5563%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.25rem_1.25rem] bg-[right_1rem_center] bg-no-repeat pr-10 appearance-none" required>
+                    <option value="" disabled selected>Select a topic...</option>
+                    <option value="support">General Support</option>
+                    <option value="billing">Billing Issue</option>
+                    <option value="feedback">Product Feedback</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="contact-message" class="nm-label">Message</label>
+                  <textarea id="contact-message" rows="5" class="nm-input w-full resize-y" placeholder="How can we help you today?" required></textarea>
+                </div>
+                <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-walnut py-3.5 font-semibold text-white shadow-lg transition-transform hover:-translate-y-0.5 hover:bg-[#56402E]">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MAP SECTION ================= -->
+    <section class="border-t border-[#EAE1D2] bg-white py-16 lg:py-24" aria-labelledby="map-heading">
+      <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-terracotta">Our Location</p>
+        <h2 id="map-heading" class="mt-4 font-display text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">Visit Our Headquarters</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-[#4B5563] sm:text-lg">
+          Drop by for a coffee and chat with the team. We'd love to show you around!
+        </p>
+        
+        <div class="relative mt-12 h-[400px] w-full overflow-hidden rounded-3xl border border-[#EAE1D2] shadow-xl sm:h-[500px]">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124409.84651351543!2d77.51152010888998!3d12.98634812234033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="absolute inset-0 h-full w-full grayscale mix-blend-multiply opacity-80 transition-all duration-500 hover:opacity-100 hover:grayscale-0"></iframe>
+          
+          <div class="pointer-events-none absolute inset-0 flex items-center justify-center p-4">
+            <div class="pointer-events-auto rounded-2xl bg-white p-6 shadow-2xl lg:p-8 max-w-sm text-center">
+              <h3 class="font-display text-xl font-bold text-charcoal">NestMarket HQ</h3>
+              <p class="mt-2 text-[#4B5563]">123 Eco Park Way, Innovation Hub<br>Bangalore, Karnataka 560001</p>
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 rounded-xl bg-terracotta px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:-translate-y-0.5">
+                Get Directions
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============================ FAQ ============================ -->
+    <section id="faq" class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24" aria-labelledby="faq-title">
+      <div class="text-center">
+        <p class="text-xs font-bold uppercase tracking-[0.18em] text-terracotta">Questions</p>
+        <h2 id="faq-title" class="mt-2 font-display text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-10 space-y-3" data-accordion="single">
+        <div class="faq-item overflow-hidden rounded-2xl border border-[#EAE1D2] bg-white">
+          <h3><button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-[15px] font-semibold text-charcoal hover:text-walnut" aria-expanded="false" aria-controls="faq-1" id="faq-q1">
+            How do I buy furniture?
+            <svg class="faq-icon h-5 w-5 shrink-0 text-terracotta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button></h3>
+          <div class="faq-answer px-5" id="faq-1" role="region" aria-labelledby="faq-q1"><p class="pb-5 text-sm leading-relaxed text-[#4B5563]">Browse listings near you, open a listing to see photos and condition, then message the seller directly. Agree on a price and arrange pickup or delivery between yourselves.</p></div>
+        </div>
+
+        <div class="faq-item overflow-hidden rounded-2xl border border-[#EAE1D2] bg-white">
+          <h3><button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-[15px] font-semibold text-charcoal hover:text-walnut" aria-expanded="false" aria-controls="faq-2" id="faq-q2">
+            How do I sell furniture?
+            <svg class="faq-icon h-5 w-5 shrink-0 text-terracotta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button></h3>
+          <div class="faq-answer px-5" id="faq-2" role="region" aria-labelledby="faq-q2"><p class="pb-5 text-sm leading-relaxed text-[#4B5563]">Open “Sell Your Furniture”, choose a category, add photos, details and your asking price, then publish. In this frontend demo the listing is prepared locally and not sent to a real marketplace backend.</p></div>
+        </div>
+
+        <div class="faq-item overflow-hidden rounded-2xl border border-[#EAE1D2] bg-white">
+          <h3><button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-[15px] font-semibold text-charcoal hover:text-walnut" aria-expanded="false" aria-controls="faq-3" id="faq-q3">
+            Can I make an offer?
+            <svg class="faq-icon h-5 w-5 shrink-0 text-terracotta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button></h3>
+          <div class="faq-answer px-5" id="faq-3" role="region" aria-labelledby="faq-q3"><p class="pb-5 text-sm leading-relaxed text-[#4B5563]">Yes. If a listing is marked negotiable you can send an offer amount with a short message. The seller can accept, decline or counter. Offer statuses shown here are simulated for the demo.</p></div>
+        </div>
+
+        <div class="faq-item overflow-hidden rounded-2xl border border-[#EAE1D2] bg-white">
+          <h3><button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-[15px] font-semibold text-charcoal hover:text-walnut" aria-expanded="false" aria-controls="faq-4" id="faq-q4">
+            How do I contact a seller?
+            <svg class="faq-icon h-5 w-5 shrink-0 text-terracotta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button></h3>
+          <div class="faq-answer px-5" id="faq-4" role="region" aria-labelledby="faq-q4"><p class="pb-5 text-sm leading-relaxed text-[#4B5563]">Use the “Message Seller” button on the listing page to write a short enquiry. Messages in this demo are not securely stored or actually delivered.</p></div>
+        </div>
+
+        <div class="faq-item overflow-hidden rounded-2xl border border-[#EAE1D2] bg-white">
+          <h3><button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-[15px] font-semibold text-charcoal hover:text-walnut" aria-expanded="false" aria-controls="faq-5" id="faq-q5">
+            How does pickup work?
+            <svg class="faq-icon h-5 w-5 shrink-0 text-terracotta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button></h3>
+          <div class="faq-answer px-5" id="faq-5" role="region" aria-labelledby="faq-q5"><p class="pb-5 text-sm leading-relaxed text-[#4B5563]">Buyer and seller agree on a time and a safe location. Meet in a public place where possible, inspect the item, and then complete the exchange directly.</p></div>
+        </div>
+
+        <div class="faq-item overflow-hidden rounded-2xl border border-[#EAE1D2] bg-white">
+          <h3><button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-[15px] font-semibold text-charcoal hover:text-walnut" aria-expanded="false" aria-controls="faq-6" id="faq-q6">
+            Can I arrange delivery?
+            <svg class="faq-icon h-5 w-5 shrink-0 text-terracotta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button></h3>
+          <div class="faq-answer px-5" id="faq-6" role="region" aria-labelledby="faq-q6"><p class="pb-5 text-sm leading-relaxed text-[#4B5563]">Some sellers offer delivery at an extra cost — check the listing details. Delivery is always arranged directly with the seller; this demo does not book real delivery services.</p></div>
+        </div>
+
+        <div class="faq-item overflow-hidden rounded-2xl border border-[#EAE1D2] bg-white">
+          <h3><button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-[15px] font-semibold text-charcoal hover:text-walnut" aria-expanded="false" aria-controls="faq-7" id="faq-q7">
+            How do I report a listing?
+            <svg class="faq-icon h-5 w-5 shrink-0 text-terracotta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button></h3>
+          <div class="faq-answer px-5" id="faq-7" role="region" aria-labelledby="faq-q7"><p class="pb-5 text-sm leading-relaxed text-[#4B5563]">Open “Report a Listing” on any listing page and choose a reason such as incorrect information, spam or fraud concern. Reports appear in the admin dashboard demo.</p></div>
+        </div>
+
+        <div class="faq-item overflow-hidden rounded-2xl border border-[#EAE1D2] bg-white">
+          <h3><button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-[15px] font-semibold text-charcoal hover:text-walnut" aria-expanded="false" aria-controls="faq-8" id="faq-q8">
+            Is my personal information visible?
+            <svg class="faq-icon h-5 w-5 shrink-0 text-terracotta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button></h3>
+          <div class="faq-answer px-5" id="faq-8" role="region" aria-labelledby="faq-q8"><p class="pb-5 text-sm leading-relaxed text-[#4B5563]">Only the details you choose to share with a seller are shown to them. Avoid posting unnecessary personal or financial information in listing descriptions.</p></div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= FAQ CTA ================= -->
+    <section class="border-t border-[#EAE1D2] bg-sand/50 py-12 text-center" aria-labelledby="faq-cta-heading">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <h2 id="faq-cta-heading" class="font-display text-xl font-bold text-charcoal sm:text-2xl">Looking for quick answers?</h2>
+        <p class="mt-3 text-[#4B5563]">Check out our comprehensive guide for buyers and sellers.</p>
+        <a href="./how-it-works.html" class="mt-6 inline-flex h-11 items-center justify-center rounded-xl border border-walnut px-6 font-semibold text-walnut transition-colors hover:bg-walnut hover:text-white">
+          Read How It Works
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="./js/data.js"></script>
+  <script src="./js/navbar.js"></script>
+  <script src="./js/footer.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
+

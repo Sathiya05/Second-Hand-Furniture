@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell Your Furniture | NestMarket</title>
+  <meta name="description" content="List your pre-loved furniture on NestMarket and connect with buyers near you. Add photos, set your price and receive enquiries from your local community.">
+  <link rel="canonical" href="https://www.nestmarket.example/sell-furniture.html">
+  <meta name="theme-color" content="#6B4F3A">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="./favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { walnut: '#6B4F3A', sand: '#E8DCC8', charcoal: '#1F2933', terracotta: '#C47A44' },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'], display: ['"DM Sans"', 'Inter', 'ui-sans-serif', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-white font-sans text-charcoal antialiased">
+
+  <a href="#main" class="sr-only-focusable sr-only rounded-lg bg-white px-4 py-2 text-sm font-semibold shadow-lg focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100]">Skip to main content</a>
+
+  <div id="navbar"></div>
+
+  <main id="main">
+    <!-- ================= HEADER ================= -->
+    <section class="relative flex min-h-[100vh] flex-col justify-center overflow-hidden border-b border-[#EAE1D2] bg-sand/70" aria-labelledby="sell-title">
+      <div class="relative mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
+          <div class="anim-fade-up">
+            <span class="chip bg-white/80 text-[#6B4F3A] ring-1 ring-[#6B4F3A]/15">
+              <span class="status-dot bg-terracotta"></span> Zero listing fees
+            </span>
+            <h1 id="sell-title" class="mt-5 font-display text-4xl font-bold leading-[1.08] tracking-tight text-charcoal text-balance sm:text-5xl lg:text-[3.4rem]">
+              Give your furniture a <span class="text-terracotta">second life.</span>
+            </h1>
+            <p class="mt-5 max-w-xl text-base leading-relaxed text-[#3D4A56] sm:text-lg">
+              Declutter your home and earn cash by selling your pre-loved furniture to verified buyers in your local community. It's fast, safe, and completely free.
+            </p>
+            
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+              <a href="#sell-form" class="inline-flex h-[52px] items-center justify-center gap-2 rounded-xl bg-walnut px-8 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#56402E] hover:shadow-lg hover:shadow-walnut/25">
+                Start Listing
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="./how-it-works.html" class="inline-flex h-[52px] items-center justify-center rounded-xl border-2 border-walnut/20 px-8 font-semibold text-charcoal transition-colors hover:border-walnut hover:bg-walnut/5">
+                See How It Works
+              </a>
+            </div>
+
+            <div class="mt-10 flex items-center gap-4 border-t border-[#EAE1D2] pt-6">
+              <div class="flex -space-x-3">
+                <img class="inline-block h-10 w-10 rounded-full border-2 border-sand object-cover" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Seller">
+                <img class="inline-block h-10 w-10 rounded-full border-2 border-sand object-cover" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Seller">
+                <img class="inline-block h-10 w-10 rounded-full border-2 border-sand object-cover" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Seller">
+              </div>
+              <p class="text-sm font-medium text-[#4B5563]">Join <span class="font-bold text-charcoal">2,400+</span> happy sellers</p>
+            </div>
+          </div>
+          <div class="relative anim-fade-up mt-8 lg:mt-0" style="animation-delay:.12s">
+            <div class="img-zoom overflow-hidden rounded-3xl shadow-2xl shadow-[#6B4F3A]/25 aspect-video lg:aspect-[4/3] max-h-[45vh] lg:max-h-[60vh]">
+              <img src="./images/photo-1618220179428-22790b461013.jpg" alt="Living room corner with furniture ready to be listed for sale" class="h-full w-full object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- ================= HOW SELLING WORKS ================= -->
+    <section class="bg-white py-16 lg:py-24" aria-labelledby="how-selling-works">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-terracotta">Simple Process</p>
+          <h2 id="how-selling-works" class="mt-2 font-display text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">How to Sell on NestMarket</h2>
+        </div>
+        <div class="mt-12 grid gap-8 md:grid-cols-3">
+          <div class="rounded-2xl border border-[#EAE1D2] p-8 text-center shadow-sm">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-sand font-display text-xl font-bold text-terracotta">1</span>
+            <h3 class="mt-5 font-display text-lg font-bold text-charcoal">Snap & List</h3>
+            <p class="mt-2 text-sm text-[#4B5563]">Take a few photos of your item, write a brief description, and set your price.</p>
+          </div>
+          <div class="rounded-2xl border border-[#EAE1D2] p-8 text-center shadow-sm">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-sand font-display text-xl font-bold text-terracotta">2</span>
+            <h3 class="mt-5 font-display text-lg font-bold text-charcoal">Connect</h3>
+            <p class="mt-2 text-sm text-[#4B5563]">Interested local buyers will message you directly through our secure platform.</p>
+          </div>
+          <div class="rounded-2xl border border-[#EAE1D2] p-8 text-center shadow-sm">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-sand font-display text-xl font-bold text-terracotta">3</span>
+            <h3 class="mt-5 font-display text-lg font-bold text-charcoal">Get Paid</h3>
+            <p class="mt-2 text-sm text-[#4B5563]">Meet the buyer to hand over the item and receive your payment in full.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHAT SELLS BEST ================= -->
+    <section class="border-t border-[#EAE1D2] bg-[#FBF8F2] py-16 lg:py-24" aria-labelledby="best-sellers">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <h2 id="best-sellers" class="font-display text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">What sells best right now?</h2>
+            <p class="mt-4 text-[#4B5563]">Based on recent marketplace trends in your area, these items are in high demand and typically sell within 48 hours.</p>
+            <ul class="mt-6 space-y-3">
+              <li class="flex items-center gap-3"><svg class="h-5 w-5 text-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span class="text-charcoal font-medium">Solid Wood Dining Tables</span></li>
+              <li class="flex items-center gap-3"><svg class="h-5 w-5 text-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span class="text-charcoal font-medium">Ergonomic Office Chairs</span></li>
+              <li class="flex items-center gap-3"><svg class="h-5 w-5 text-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span class="text-charcoal font-medium">Compact Sofas & Loveseats</span></li>
+            </ul>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <img src="./images/photo-1555041469-a586c61ea9bc.jpg" class="rounded-2xl h-48 w-full object-cover shadow-md" alt="Popular sofa">
+            <img src="./images/photo-1594026112284-02bb6f3352fe.jpg" class="rounded-2xl h-48 w-full object-cover shadow-md mt-6" alt="Popular storage">
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ================= FORM ================= -->
+    <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14" aria-labelledby="form-heading">
+      <h2 id="form-heading" class="sr-only">Create your listing</h2>
+
+      <div class="grid gap-8 lg:grid-cols-[1.55fr_1fr] lg:gap-10">
+
+        <!-- ---------- Left: steps ---------- -->
+        <div>
+          <!-- Progress -->
+          <div class="rounded-2xl border border-[#EAE1D2] bg-white p-5 shadow-sm sm:p-6">
+            <div class="flex items-center justify-between gap-3">
+              <p class="text-sm font-semibold text-charcoal">Step <span id="step-current">1</span> of 8</p>
+              <p id="step-label" class="text-sm text-[#6B7683]">Category</p>
+            </div>
+            <div class="mt-3 h-2 w-full overflow-hidden rounded-full bg-sand" role="progressbar" aria-valuemin="1" aria-valuemax="8" aria-valuenow="1" aria-label="Listing form progress">
+              <div id="progress-bar" class="progress-bar h-full rounded-full bg-walnut" style="width:12.5%"></div>
+            </div>
+            <ol id="step-dots" class="mt-4 hidden flex-wrap gap-2 sm:flex"></ol>
+          </div>
+
+          <form id="sell-form" class="mt-6 rounded-2xl border border-[#EAE1D2] bg-white p-5 shadow-sm sm:p-7" novalidate>
+
+            <!-- STEP 1 -->
+            <fieldset class="step-panel is-active" data-step="1" data-label="Category">
+              <legend class="font-display text-xl font-bold text-charcoal">Choose a Category</legend>
+              <p class="mt-1.5 text-sm text-[#6B7683]">Pick the room this piece belongs to.</p>
+              <div id="cat-options" class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4" role="radiogroup" aria-label="Listing category"></div>
+              <p class="field-error mt-3" data-error-for="1">Please choose a category to continue.</p>
+            </fieldset>
+
+            <!-- STEP 2 -->
+            <fieldset class="step-panel" data-step="2" data-label="Item Information">
+              <legend class="font-display text-xl font-bold text-charcoal">Item Information</legend>
+              <p class="mt-1.5 text-sm text-[#6B7683]">Describe the piece the way you would describe it to a neighbour.</p>
+
+              <div class="mt-5 space-y-4">
+                <div>
+                  <label class="nm-label" for="f-title">Title <span class="text-rose-600">*</span></label>
+                  <input id="f-title" type="text" class="nm-input" placeholder="e.g. Solid Wood Dining Table">
+                  <p class="field-error">Please enter a title (at least 4 characters).</p>
+                </div>
+                <div>
+                  <label class="nm-label" for="f-description">Description <span class="text-rose-600">*</span></label>
+                  <textarea id="f-description" rows="4" class="nm-textarea" placeholder="Condition, dimensions, reason for selling..."></textarea>
+                  <p class="field-error">Please add a short description (at least 15 characters).</p>
+                </div>
+                <div class="grid gap-4 sm:grid-cols-3">
+                  <div>
+                    <label class="nm-label" for="f-brand">Brand</label>
+                    <input id="f-brand" type="text" class="nm-input" placeholder="Optional">
+                  </div>
+                  <div>
+                    <label class="nm-label" for="f-material">Material</label>
+                    <input id="f-material" type="text" class="nm-input" placeholder="e.g. Sheesham Wood">
+                  </div>
+                  <div>
+                    <label class="nm-label" for="f-age">Age</label>
+                    <select id="f-age" class="nm-select">
+                      <option value="">Select age</option>
+                      <option>Less than 6 months</option>
+                      <option>6 months – 1 year</option>
+                      <option>1 – 3 years</option>
+                      <option>3 – 5 years</option>
+                      <option>More than 5 years</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- STEP 3 -->
+            <fieldset class="step-panel" data-step="3" data-label="Condition">
+              <legend class="font-display text-xl font-bold text-charcoal">Condition</legend>
+              <p class="mt-1.5 text-sm text-[#6B7683]">Be honest — it builds trust with buyers.</p>
+              <div id="condition-options" class="mt-5 grid grid-cols-2 gap-3" role="radiogroup" aria-label="Item condition"></div>
+              <p class="field-error mt-3" data-error-for="3">Please select the condition.</p>
+            </fieldset>
+
+            <!-- STEP 4 -->
+            <fieldset class="step-panel" data-step="4" data-label="Price">
+              <legend class="font-display text-xl font-bold text-charcoal">Price</legend>
+              <p class="mt-1.5 text-sm text-[#6B7683]">Set a fair asking price in Indian Rupees.</p>
+
+              <div class="mt-5 space-y-4">
+                <div>
+                  <label class="nm-label" for="f-price">Asking Price (₹) <span class="text-rose-600">*</span></label>
+                  <div class="relative">
+                    <span class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 font-display text-lg font-bold text-walnut">₹</span>
+                    <input id="f-price" type="number" min="1" step="100" inputmode="numeric" class="nm-input pl-9 font-display text-lg font-bold" placeholder="5000">
+                  </div>
+                  <p class="field-error">Enter a valid price greater than ₹0.</p>
+                </div>
+
+                <fieldset>
+                  <legend class="nm-label">Negotiable</legend>
+                  <div class="flex gap-3">
+                    <label class="option-card is-selected flex flex-1 cursor-pointer items-center gap-2.5 rounded-xl border px-4 py-3 text-sm font-medium hover:border-walnut">
+                      <input type="radio" name="negotiable" value="Yes" checked> Yes, open to offers
+                    </label>
+                    <label class="option-card flex flex-1 cursor-pointer items-center gap-2.5 rounded-xl border px-4 py-3 text-sm font-medium hover:border-walnut">
+                      <input type="radio" name="negotiable" value="No"> No, fixed price
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+            </fieldset>
+
+            <!-- STEP 5 -->
+            <fieldset class="step-panel" data-step="5" data-label="Location">
+              <legend class="font-display text-xl font-bold text-charcoal">Location</legend>
+              <p class="mt-1.5 text-sm text-[#6B7683]">Where can buyers collect the item?</p>
+              <div class="mt-5 grid gap-4 sm:grid-cols-3">
+                <div>
+                  <label class="nm-label" for="f-city">City <span class="text-rose-600">*</span></label>
+                  <select id="f-city" class="nm-select">
+                    <option value="">Select city</option>
+                    <option>Hosur</option><option>Bangalore</option><option>Chennai</option>
+                    <option>Krishnagiri</option><option>Salem</option><option>Dharmapuri</option>
+                  </select>
+                  <p class="field-error">Please select a city.</p>
+                </div>
+                <div>
+                  <label class="nm-label" for="f-area">Area <span class="text-rose-600">*</span></label>
+                  <input id="f-area" type="text" class="nm-input" placeholder="e.g. Sampigehalli">
+                  <p class="field-error">Please enter an area.</p>
+                </div>
+                <div>
+                  <label class="nm-label" for="f-pincode">Pincode <span class="text-rose-600">*</span></label>
+                  <input id="f-pincode" type="text" inputmode="numeric" maxlength="6" class="nm-input" placeholder="635109">
+                  <p class="field-error">Enter a valid 6-digit pincode.</p>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- STEP 6 -->
+            <fieldset class="step-panel" data-step="6" data-label="Photos">
+              <legend class="font-display text-xl font-bold text-charcoal">Photos</legend>
+              <p class="mt-1.5 text-sm text-[#6B7683]">Add up to 8 clear photos in daylight.</p>
+
+              <label for="f-photos" class="mt-5 flex cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-[#D9C7A8] bg-sand/40 px-6 py-10 text-center transition-colors hover:border-walnut hover:bg-sand/70">
+                <svg class="h-9 w-9 text-[#C47A44]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 16V4m0 0L8 8m4-4 4 4"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+                <span class="text-sm font-semibold text-charcoal">Click to upload photos</span>
+                <span class="text-xs text-[#6B7683]">JPG or PNG · multiple selection supported</span>
+              </label>
+              <input id="f-photos" type="file" accept="image/*" multiple class="sr-only">
+              <div id="photo-previews" class="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-4"></div>
+              <p id="photo-hint" class="mt-3 text-xs text-[#6B7683]">No photos added yet — you can continue without them in this demo.</p>
+            </fieldset>
+
+            <!-- STEP 7 -->
+            <fieldset class="step-panel" data-step="7" data-label="Pickup / Delivery">
+              <legend class="font-display text-xl font-bold text-charcoal">Pickup / Delivery</legend>
+              <p class="mt-1.5 text-sm text-[#6B7683]">Let buyers know how handover works.</p>
+
+              <div class="mt-5 space-y-3">
+                <label class="option-card is-selected flex cursor-pointer items-start gap-3 rounded-xl border px-4 py-3.5 hover:border-walnut">
+                  <input id="f-pickup" type="checkbox" checked class="mt-1">
+                  <span>
+                    <span class="block text-sm font-semibold text-charcoal">Pickup Available</span>
+                    <span class="block text-xs text-[#6B7683]">Buyers can collect from the location you shared.</span>
+                  </span>
+                </label>
+                <label class="option-card flex cursor-pointer items-start gap-3 rounded-xl border px-4 py-3.5 hover:border-walnut">
+                  <input id="f-delivery" type="checkbox" class="mt-1">
+                  <span>
+                    <span class="block text-sm font-semibold text-charcoal">Delivery Available</span>
+                    <span class="block text-xs text-[#6B7683]">You can drop it off within your city.</span>
+                  </span>
+                </label>
+                <div id="delivery-charges-wrap" class="hidden">
+                  <label class="nm-label" for="f-delivery-charges">Delivery Charges (₹)</label>
+                  <input id="f-delivery-charges" type="number" min="0" step="50" class="nm-input" placeholder="e.g. 300">
+                </div>
+                <p class="field-error" id="handover-error">Select at least one handover option.</p>
+              </div>
+            </fieldset>
+
+            <!-- STEP 8 -->
+            <fieldset class="step-panel" data-step="8" data-label="Seller Contact">
+              <legend class="font-display text-xl font-bold text-charcoal">Seller Contact</legend>
+              <p class="mt-1.5 text-sm text-[#6B7683]">How buyers can reach you.</p>
+
+              <div class="mt-5 space-y-4">
+                <div>
+                  <label class="nm-label" for="f-name">Name <span class="text-rose-600">*</span></label>
+                  <input id="f-name" type="text" class="nm-input" placeholder="Your name">
+                  <p class="field-error">Please enter your name.</p>
+                </div>
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <label class="nm-label" for="f-email">Email <span class="text-rose-600">*</span></label>
+                    <input id="f-email" type="email" class="nm-input" placeholder="you@example.com">
+                    <p class="field-error">Enter a valid email address.</p>
+                  </div>
+                  <div>
+                    <label class="nm-label" for="f-phone">Phone <span class="text-rose-600">*</span></label>
+                    <input id="f-phone" type="tel" inputmode="tel" class="nm-input" placeholder="10-digit mobile number">
+                    <p class="field-error">Enter a valid 10-digit phone number.</p>
+                  </div>
+                </div>
+                <label class="flex items-start gap-3 rounded-xl bg-sand/50 px-4 py-3.5 text-xs leading-relaxed text-[#4B5563]">
+                  <input id="f-agree" type="checkbox" class="mt-0.5">
+                  <span>I confirm this is my own item, the details are accurate, and I follow the community guidelines.</span>
+                </label>
+                <p class="field-error" id="agree-error">Please confirm to continue.</p>
+              </div>
+            </fieldset>
+
+            <!-- Nav -->
+            <div class="mt-8 flex items-center justify-between gap-3 border-t border-[#EAE1D2] pt-6">
+              <button type="button" id="prev-step" class="inline-flex items-center gap-2 rounded-xl border border-[#DED3C0] px-5 py-3 text-sm font-semibold text-charcoal transition-colors hover:bg-[#F5EFE4] disabled:cursor-not-allowed disabled:opacity-40" disabled>
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+                Back
+              </button>
+
+              <button type="button" id="next-step" class="inline-flex items-center gap-2 rounded-xl bg-walnut px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-walnut/20 transition-colors hover:bg-[#56402E]">
+                Next
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+
+              <button type="submit" id="publish-btn" class="hidden items-center gap-2 rounded-xl bg-terracotta px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-terracotta/25 transition-transform hover:-translate-y-0.5">
+                Publish Listing
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 16V4m0 0L8 8m4-4 4 4"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+              </button>
+            </div>
+          </form>
+
+          <!-- Success -->
+          <div id="success-panel" class="mt-6 hidden rounded-2xl border border-emerald-200 bg-emerald-50 p-7 text-center">
+            <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-600 text-white">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+            </span>
+            <h2 class="mt-4 font-display text-2xl font-bold text-charcoal">Your listing has been prepared successfully.</h2>
+            <p class="mx-auto mt-2 max-w-md text-sm text-[#4B5563]">
+              This is a frontend demonstration — the listing was <strong>not</strong> published to a real marketplace, database or payment system.
+            </p>
+            <div class="mt-6 flex flex-wrap justify-center gap-3">
+              <a href="./browse.html" class="rounded-xl bg-walnut px-5 py-3 text-sm font-semibold text-white hover:bg-[#56402E]">See how listings appear</a>
+              <button type="button" id="restart-form" class="rounded-xl border border-walnut px-5 py-3 text-sm font-semibold text-walnut hover:bg-walnut hover:text-white">Create another listing</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---------- Right: live preview ---------- -->
+        <aside class="lg:sticky lg:top-32 lg:h-fit" aria-labelledby="preview-title">
+          <div class="rounded-2xl border border-[#EAE1D2] bg-white p-5 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h2 id="preview-title" class="font-display text-lg font-bold text-charcoal">Listing Preview</h2>
+              <span class="chip bg-sand text-[#6B4F3A]">Live</span>
+            </div>
+
+            <div class="mt-4 overflow-hidden rounded-2xl border border-[#EAE1D2]">
+              <div class="img-zoom relative aspect-[4/3] bg-sand">
+                <img id="preview-image" src="./images/photo-1577140917170-285929fb55b7.jpg" alt="Preview of the listing photo" class="h-full w-full object-cover">
+                <span id="preview-condition" class="chip absolute left-3 top-3 bg-white/95 text-[#3D4A56]">Condition</span>
+              </div>
+              <div class="p-4">
+                <p id="preview-category" class="text-[11px] font-semibold uppercase tracking-wide text-[#6B7683]">Category</p>
+                <p id="preview-title-text" class="mt-1 font-display text-base font-bold text-charcoal">Your listing title</p>
+                <p id="preview-price" class="mt-1 font-display text-lg font-bold text-walnut">₹0</p>
+                <p class="mt-1 flex items-center gap-1.5 text-xs text-[#6B7683]">
+                  <svg class="h-3.5 w-3.5 text-terracotta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span id="preview-location">Location not set</span>
+                </p>
+                <p id="preview-handover" class="mt-2 text-xs text-[#4B5563]">Pickup available</p>
+              </div>
+            </div>
+
+            <div class="mt-5 rounded-xl bg-sand/60 p-4 text-xs leading-relaxed text-[#4B5563]">
+              <strong class="text-charcoal">Demo note:</strong> nothing entered here is uploaded, stored or shared. Use this form to explore the seller experience.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+      <!-- ================= SELLER FAQ ================= -->
+    <section class="border-t border-[#EAE1D2] bg-white py-16 lg:py-24" aria-labelledby="faq-title">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 id="faq-title" class="font-display text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">Frequently Asked Questions</h2>
+        </div>
+        <div class="mt-10 space-y-6">
+          <div class="rounded-xl bg-sand/30 p-6">
+            <h3 class="font-display font-bold text-charcoal">How much does it cost to list?</h3>
+            <p class="mt-2 text-sm text-[#4B5563]">Listing your furniture on NestMarket is 100% free. We don't charge any listing fees or take a commission from your sale.</p>
+          </div>
+          <div class="rounded-xl bg-sand/30 p-6">
+            <h3 class="font-display font-bold text-charcoal">How do I get paid?</h3>
+            <p class="mt-2 text-sm text-[#4B5563]">You arrange payment directly with the buyer. We recommend secure cash exchanges or trusted instant mobile payment apps when you meet in person.</p>
+          </div>
+          <div class="rounded-xl bg-sand/30 p-6">
+            <h3 class="font-display font-bold text-charcoal">Who handles pickup and delivery?</h3>
+            <p class="mt-2 text-sm text-[#4B5563]">Buyers are typically responsible for picking up the items, unless you explicitly state in your listing that you can deliver.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================= CTA BANNER ========================= -->
+    <section class="bg-walnut" aria-labelledby="cta-title">
+      <div class="mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 py-16 text-center sm:px-6 lg:flex-row lg:justify-between lg:text-left lg:px-8 lg:py-20">
+        <div>
+          <h2 id="cta-title" class="font-display text-3xl font-bold leading-tight text-white sm:text-4xl">Ready to declutter your space?</h2>
+          <p class="mt-3 text-white/90 text-lg">Your unused furniture could be exactly what someone else is looking for.</p>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-4 lg:justify-end">
+          <a href="#sell-form" class="rounded-xl bg-white px-8 py-4 text-sm font-bold text-terracotta shadow-lg transition-transform hover:-translate-y-1">
+            Start Your Listing Now
+          </a>
+          <a href="./browse.html" class="rounded-xl border-2 border-white/60 px-8 py-4 text-sm font-bold text-white transition-colors hover:bg-white hover:text-terracotta">
+            Browse Instead
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/navbar.js"></script>
+  <script src="./js/footer.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/sell-furniture.js"></script>
+</body>
+</html>
+
+

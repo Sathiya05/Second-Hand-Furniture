@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Second-Hand Furniture | NestMarket</title>
+  <meta name="description" content="Browse second-hand furniture near you. Filter sofas, tables, beds, storage and decor by location, price, condition and distance, then contact local sellers.">
+  <link rel="canonical" href="https://www.nestmarket.example/browse.html">
+  <meta name="theme-color" content="#6B4F3A">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="./favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { walnut: '#6B4F3A', sand: '#E8DCC8', charcoal: '#1F2933', terracotta: '#C47A44' },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'], display: ['"DM Sans"', 'Inter', 'ui-sans-serif', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-white font-sans text-charcoal antialiased">
+
+  <a href="#main" class="sr-only-focusable sr-only rounded-lg bg-white px-4 py-2 text-sm font-semibold shadow-lg focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100]">Skip to main content</a>
+
+  <div id="navbar"></div>
+
+  <main id="main">
+
+    <!-- ================= PAGE HEADER + SEARCH ================= -->
+    <section class="relative flex min-h-[calc(100vh-4rem)] flex-col justify-between overflow-hidden border-b border-[#EAE1D2] bg-sand/70 lg:min-h-[calc(100vh-4.5rem)]" aria-labelledby="browse-title">
+      <div class="relative mx-auto grid w-full max-w-7xl flex-1 gap-10 px-4 py-8 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-10 lg:px-8 xl:gap-14">
+        
+        <div class="anim-fade-up min-w-0">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-terracotta">Marketplace</p>
+          <h1 id="browse-title" class="mt-2 font-display text-3xl font-bold tracking-tight text-charcoal text-balance sm:text-4xl lg:text-[2.5rem] xl:text-5xl">Browse Furniture Near You</h1>
+          <p class="mt-3 max-w-xl text-[#4B5563]">Search by keyword, pick a location and narrow results with filters. All listings below are demo data.</p>
+
+          <form id="browse-search" class="mt-7 rounded-2xl border border-white/70 bg-white p-4 shadow-lg shadow-[#6B4F3A]/10 sm:p-5" role="search" aria-label="Search and filter furniture">
+            <label for="search-q" class="nm-label">Search</label>
+            <div class="relative mb-3">
+              <svg class="pointer-events-none absolute left-3.5 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-[#97A1AC]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="search-q" type="search" class="nm-input pl-10" placeholder="Search sofas, tables, chairs, decor...">
+            </div>
+            
+            <div class="grid gap-3 sm:grid-cols-2 mb-3">
+              <div>
+                <label for="search-loc" class="sr-only">Location</label>
+                <select id="search-loc" class="nm-select">
+                  <option value="">All locations</option>
+                </select>
+              </div>
+              <div>
+                <label for="search-cat" class="sr-only">Category</label>
+                <select id="search-cat" class="nm-select">
+                  <option value="">All categories</option>
+                </select>
+              </div>
+            </div>
+            
+            <button type="submit" class="inline-flex h-[46px] w-full items-center justify-center gap-2 rounded-xl bg-walnut px-7 text-sm font-semibold text-white transition-colors hover:bg-[#56402E]">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              Search
+            </button>
+          </form>
+
+          <!-- category pills -->
+          <div class="mt-6 min-w-0">
+            <span class="sr-only" id="cat-pills-label">Filter by category</span>
+            <div class="no-scrollbar -mx-4 flex w-[calc(100%+2rem)] gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:w-auto sm:flex-wrap sm:px-0" role="group" aria-labelledby="cat-pills-label" id="cat-pills"></div>
+          </div>
+        </div>
+
+        <div class="relative anim-fade-up mt-2 min-w-0 lg:mt-0" style="animation-delay:.12s">
+          <div class="img-zoom aspect-video w-full max-h-[42vh] overflow-hidden rounded-3xl shadow-2xl shadow-[#6B4F3A]/25 sm:max-h-[46vh] lg:aspect-[4/5] lg:max-h-[52vh] xl:aspect-[4/3] xl:max-h-[60vh]">
+            <img src="./images/photo-1618221195710-dd6b41faaea6.jpg" alt="Living room corner with pre-loved furniture" class="h-full w-full object-cover object-center" width="1200" height="900">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RESULTS ================= -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12" aria-labelledby="results-heading">
+      <h2 id="results-heading" class="sr-only">Listing results</h2>
+
+      <div class="lg:grid lg:grid-cols-[280px_1fr] lg:gap-8 xl:gap-10">
+
+        <!-- ---------- Filters (sidebar on desktop, drawer on mobile) ---------- -->
+        <div id="filter-backdrop" class="fixed inset-0 z-[64] bg-black/45 lg:hidden" hidden></div>
+
+        <aside id="filter-drawer" class="mb-6 rounded-2xl border border-[#EAE1D2] bg-white p-5 lg:mb-0 lg:h-full lg:shadow-sm" aria-labelledby="filters-heading">
+          <div class="mb-5 flex items-center justify-between gap-3">
+            <h3 id="filters-heading" class="font-display text-lg font-bold text-charcoal">Filters</h3>
+            <div class="flex items-center gap-2">
+              <button type="button" id="clear-filters" class="text-xs font-semibold text-terracotta underline underline-offset-4 hover:text-[#A9622F]">Clear all</button>
+              <button type="button" id="filter-close" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#EAE1D2] lg:hidden" aria-label="Close filters">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <form id="filters-form" class="space-y-6">
+            <fieldset>
+              <legend class="mb-2 text-xs font-bold uppercase tracking-[0.14em] text-[#6B7683]">Category</legend>
+              <div id="filter-categories" class="space-y-1.5"></div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="mb-2 text-xs font-bold uppercase tracking-[0.14em] text-[#6B7683]">Location</legend>
+              <div id="filter-locations" class="space-y-1.5"></div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="mb-2 text-xs font-bold uppercase tracking-[0.14em] text-[#6B7683]">Price</legend>
+              <div id="filter-price" class="space-y-1.5"></div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="mb-2 text-xs font-bold uppercase tracking-[0.14em] text-[#6B7683]">Condition</legend>
+              <div id="filter-condition" class="space-y-1.5"></div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="mb-2 text-xs font-bold uppercase tracking-[0.14em] text-[#6B7683]">Distance</legend>
+              <div id="filter-distance" class="space-y-1.5"></div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="mb-2 text-xs font-bold uppercase tracking-[0.14em] text-[#6B7683]">Seller Type</legend>
+              <div id="filter-seller" class="space-y-1.5"></div>
+            </fieldset>
+
+            <div class="rounded-xl bg-sand/70 p-4 text-xs leading-relaxed text-[#4B5563]">
+              Distances and locations are demo values. NestMarket never accesses your real location in this demonstration.
+            </div>
+          </form>
+        </aside>
+
+        <!-- ---------- Grid ---------- -->
+        <div>
+          <div class="mb-6 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <button type="button" id="filter-open" class="inline-flex items-center gap-2 rounded-xl border border-[#DED3C0] bg-white px-4 py-2.5 text-sm font-semibold text-charcoal transition-colors hover:border-walnut hover:text-walnut lg:hidden">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+                Filters
+                <span id="filter-count" class="hidden rounded-full bg-terracotta px-2 py-0.5 text-[11px] font-bold text-white">0</span>
+              </button>
+              <p id="results-count" class="text-sm text-[#4B5563]" aria-live="polite">Loading listings…</p>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <label for="sort-by" class="text-sm font-medium text-[#4B5563]">Sort:</label>
+              <select id="sort-by" class="nm-select w-auto min-w-[11.5rem] py-2 text-sm">
+                <option value="recommended">Recommended</option>
+                <option value="newest">Newest</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="nearest">Nearest</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="active-chips" class="mb-5 flex flex-wrap gap-2"></div>
+
+          <div id="listing-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+
+          <div id="empty-state" class="hidden rounded-2xl border border-dashed border-[#D9C7A8] bg-sand/50 px-6 py-16 text-center">
+            <svg class="mx-auto h-12 w-12 text-[#C47A44]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <p class="mt-4 font-display text-lg font-bold text-charcoal">No furniture found matching your search.</p>
+            <p class="mx-auto mt-2 max-w-md text-sm text-[#4B5563]">Try a different keyword, widen your price range, or clear the filters to see everything.</p>
+            <button type="button" id="empty-clear" class="mt-6 rounded-xl bg-walnut px-6 py-3 text-sm font-semibold text-white hover:bg-[#56402E]">Clear all filters</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+            <!-- ================= WHY PRE-LOVED ================= -->
+    <section class="border-t border-[#EAE1D2] bg-white py-16 lg:py-24" aria-labelledby="why-title">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 id="why-title" class="font-display text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">Why Shop Pre-Loved?</h2>
+          <p class="mt-4 text-[#4B5563]">Join thousands of locals making smarter, more sustainable furniture choices.</p>
+        </div>
+        <div class="mt-12 grid gap-8 md:grid-cols-3">
+          <div class="rounded-2xl bg-sand/40 p-8 text-center">
+            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-walnut text-white">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 class="mt-5 font-display text-lg font-bold text-charcoal">Save Money</h3>
+            <p class="mt-2 text-sm text-[#4B5563]">Find high-quality pieces at a fraction of original retail price.</p>
+          </div>
+          <div class="rounded-2xl bg-sand/40 p-8 text-center">
+            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-walnut text-white">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </div>
+            <h3 class="mt-5 font-display text-lg font-bold text-charcoal">Sustain Living</h3>
+            <p class="mt-2 text-sm text-[#4B5563]">Extend the life of great furniture and reduce environmental waste.</p>
+          </div>
+          <div class="rounded-2xl bg-sand/40 p-8 text-center">
+            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-walnut text-white">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="mt-5 font-display text-lg font-bold text-charcoal">Unique Finds</h3>
+            <p class="mt-2 text-sm text-[#4B5563]">Discover vintage or rare items you won't find in big-box stores.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<!-- ================= SAFETY BANNER ================= -->
+    <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8" aria-labelledby="browse-safety">
+      <div class="flex flex-col gap-4 rounded-2xl border border-[#E8DCC8] bg-sand/60 p-6 sm:flex-row sm:items-center sm:justify-between">
+        <div class="max-w-3xl">
+          <h2 id="browse-safety" class="font-display text-lg font-bold text-charcoal">Buy &amp; Sell With Confidence</h2>
+          <p class="mt-1.5 text-sm leading-relaxed text-[#4B5563]">
+            Meet in safe public locations when possible, inspect items before completing an exchange, and avoid sharing unnecessary personal or financial information.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button type="button" class="rounded-xl bg-walnut px-4 py-2.5 text-xs font-semibold text-white hover:bg-[#56402E]" data-toast="Inspect the item, meet in public, and keep conversations respectful.">Safety Tips</button>
+          <button type="button" class="rounded-xl border border-walnut px-4 py-2.5 text-xs font-semibold text-walnut hover:bg-walnut hover:text-white" data-modal-open="report-modal">Report a Listing</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- Report modal -->
+  <div id="report-modal" class="nm-modal fixed inset-0 z-[95] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="report-title" aria-hidden="true">
+    <div class="absolute inset-0 bg-charcoal/60 backdrop-blur-sm" data-modal-close></div>
+    <div class="nm-modal-panel relative w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl">
+      <h2 id="report-title" class="font-display text-xl font-bold">Report a Listing</h2>
+      <p class="mt-1 text-sm text-[#6B7683]">Reports are simulated in this frontend demo.</p>
+      <div class="mt-5">
+        <label class="nm-label" for="report-reason">Reason</label>
+        <select id="report-reason" class="nm-select">
+          <option>Incorrect Information</option><option>Spam</option><option>Fraud Concern</option><option>Inappropriate Content</option><option>Duplicate Listing</option>
+        </select>
+      </div>
+      <div class="mt-6 flex gap-3">
+        <button type="button" class="flex-1 rounded-xl bg-walnut px-4 py-3 text-sm font-semibold text-white hover:bg-[#56402E]" data-modal-close data-toast="Report submitted (demo only).">Submit Report</button>
+        <button type="button" class="flex-1 rounded-xl border border-[#DED3C0] px-4 py-3 text-sm font-semibold hover:bg-[#F5EFE4]" data-modal-close>Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/navbar.js"></script>
+  <script src="./js/footer.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/browse.js"></script>
+</body>
+</html>
+
+

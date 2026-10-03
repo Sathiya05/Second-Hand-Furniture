@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | NestMarket</title>
+  <meta name="description" content="Sign in to your NestMarket account to manage listings, saved items, enquiries and offers — or try the demo user and admin dashboards.">
+  <link rel="canonical" href="https://www.nestmarket.example/login.html">
+  <meta name="theme-color" content="#6B4F3A">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="./favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { walnut: '#6B4F3A', sand: '#E8DCC8', charcoal: '#1F2933', terracotta: '#C47A44' },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'], display: ['"DM Sans"', 'Inter', 'ui-sans-serif', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-[#FBF8F2] font-sans text-charcoal antialiased">
+
+  <div class="fixed top-4 right-4 z-50 flex items-center gap-2">
+    <!-- Theme Toggle -->
+    <button type="button" class="theme-toggle-btn flex h-10 w-10 items-center justify-center rounded-xl border border-[#EAE1D2] bg-white text-[#1F2933] shadow-sm transition-colors hover:text-[#6B4F3A] hover:bg-[#F5EFE4]" aria-label="Toggle Theme">
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+    </button>
+    <!-- RTL Toggle -->
+    <button type="button" class="rtl-toggle-btn flex h-10 w-10 items-center justify-center rounded-xl border border-[#EAE1D2] bg-white text-[#1F2933] shadow-sm transition-colors hover:text-[#6B4F3A] hover:bg-[#F5EFE4]" aria-label="Toggle RTL">
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+    </button>
+  </div>
+
+
+  <a href="#main" class="sr-only-focusable sr-only rounded-lg bg-white px-4 py-2 text-sm font-semibold shadow-lg focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100]">Skip to main content</a>
+
+
+  <main id="main" class="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8 lg:py-16">
+
+    <!-- ================= FORM ================= -->
+    <section aria-labelledby="login-title" class="order-2 lg:order-1">
+      <div class="mt-10 rounded-3xl border border-[#EAE1D2] bg-white p-7 shadow-sm sm:p-9 lg:mt-0">
+        
+        <!-- Logo -->
+        <div class="flex justify-center mb-8">
+          <a href="index.html" class="flex shrink-0 items-center gap-2.5 hover:opacity-90 transition-opacity" aria-label="NestMarket home">
+            <span class="relative inline-flex items-center justify-center rounded-xl bg-[#6B4F3A] shadow-sm" style="width:38px;height:38px" aria-hidden="true">
+              <svg width="25" height="25" viewBox="0 0 32 32" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 14.5 16 4l12 10.5"/>
+                <path d="M7 13v14h18V13"/>
+                <path d="M12 27v-6h8v6"/>
+                <path d="M12 21v-4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4"/>
+              </svg>
+            </span>
+            <span class="flex flex-col leading-none text-left">
+              <span class="font-display text-[19px] font-bold tracking-tight text-[#1F2933]">NestMarket</span>
+              <span class="mt-0.5 text-[9px] font-semibold uppercase tracking-[0.16em] text-[#6B4F3A]/75">Good Furniture. New Homes.</span>
+            </span>
+          </a>
+        </div>
+<div class="text-center">
+          <span class="chip bg-sand text-[#6B4F3A]">Welcome back</span>
+          <h1 id="login-title" class="mt-4 font-display text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">Welcome Back</h1>
+          <p class="mt-2 text-sm text-[#4B5563]">Sign in to manage your listings, saved items and offers.</p>
+        </div>
+
+        <form id="login-form" class="mt-7 space-y-5" novalidate>
+          <div>
+            <label class="nm-label" for="login-email">Email</label>
+            <input id="login-email" type="email" autocomplete="email" class="nm-input" placeholder="you@example.com">
+            <p class="field-error">Enter a valid email address.</p>
+          </div>
+
+          <div>
+            <label class="nm-label" for="login-password">Password</label>
+            <input id="login-password" type="password" autocomplete="current-password" class="nm-input" placeholder="Enter your password">
+            <p class="field-error">Password must be at least 6 characters.</p>
+          </div>
+
+          <div class="flex items-center justify-between mt-1">
+            <label class="flex cursor-pointer items-center gap-2.5 text-sm text-[#4B5563]">
+              <input type="checkbox" id="remember-me"> Remember Me
+            </label>
+            <button type="button" class="text-xs font-semibold text-terracotta underline underline-offset-4 hover:text-[#A9622F]" data-toast="Password reset is not implemented in this frontend demo.">Forgot Password?</button>
+          </div>
+
+          <button type="submit" class="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-walnut text-sm font-semibold text-white shadow-lg shadow-walnut/25 transition-colors hover:bg-[#56402E]">
+            Login
+          </button>
+
+          <p class="text-center text-sm text-[#4B5563]">
+            Don’t have an account?
+            <button type="button" class="font-semibold text-walnut underline underline-offset-4" data-toast="Account creation is not implemented in this frontend demo.">Create Account</button>
+          </p>
+        </form>
+
+
+      </div>
+    </section>
+
+    <!-- ================= VISUAL ================= -->
+    <section class="hidden lg:block lg:order-2" aria-label="About NestMarket">
+      <div class="relative overflow-hidden rounded-3xl shadow-2xl shadow-[#6B4F3A]/25">
+        <img src="./images/photo-1554995207-c18c203602cb.jpg" alt="Warm living room furnished with second-hand furniture" class="h-60 w-full object-cover sm:h-80 lg:h-[460px]" width="1200" height="800">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1F2933]/85 via-[#1F2933]/25 to-transparent" aria-hidden="true"></div>
+
+        <div class="absolute inset-x-0 bottom-0 p-7 sm:p-9">
+          <p class="font-display text-2xl font-bold text-white sm:text-3xl">Good Furniture. New Homes.</p>
+          <p class="mt-2 max-w-md text-sm leading-relaxed text-white/80">
+            Discover affordable second-hand furniture from people in your community and give pre-loved pieces a new home.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="./browse.html" class="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-walnut transition-transform hover:-translate-y-0.5">Browse Listings</a>
+            <a href="./sell-furniture.html" class="rounded-xl border border-white/50 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10">Post a Listing</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 grid grid-cols-3 gap-4">
+        <div class="rounded-2xl border border-[#EAE1D2] bg-white p-4 text-center">
+          <p class="font-display text-xl font-bold text-walnut">600+</p><p class="mt-0.5 text-[11px] font-medium uppercase tracking-wide text-[#6B7683]">Listings</p>
+        </div>
+        <div class="rounded-2xl border border-[#EAE1D2] bg-white p-4 text-center">
+          <p class="font-display text-xl font-bold text-walnut">6</p><p class="mt-0.5 text-[11px] font-medium uppercase tracking-wide text-[#6B7683]">Locations</p>
+        </div>
+        <div class="rounded-2xl border border-[#EAE1D2] bg-white p-4 text-center">
+          <p class="font-display text-xl font-bold text-walnut">8</p><p class="mt-0.5 text-[11px] font-medium uppercase tracking-wide text-[#6B7683]">Categories</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="./js/data.js"></script>
+
+  <script src="./js/main.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById('login-form');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var email = document.getElementById('login-email');
+          var pass = document.getElementById('login-password');
+          var ok = true;
+
+          var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim());
+          email.classList.toggle('is-invalid', !emailOk);
+          var emailErr = email.parentElement.querySelector('.field-error');
+          if (emailErr) emailErr.classList.toggle('is-visible', !emailOk);
+          if (!emailOk) { email.focus(); ok = false; }
+
+          var passOk = pass.value.length >= 6;
+          pass.classList.toggle('is-invalid', !passOk);
+          var passErr = pass.parentElement.querySelector('.field-error');
+          if (passErr) passErr.classList.toggle('is-visible', !passOk);
+          if (!passOk) { if (ok) pass.focus(); ok = false; }
+
+          if (!ok) { nmToast('Please check the highlighted fields.', 'error'); return; }
+          nmToast('Demo only — no real authentication is performed. Opening the User Dashboard…', 'info');
+          setTimeout(function () { window.location.href = './dashboard/user-dashboard.html'; }, 900);
+        });
+      }
+
+      var userBtn = document.getElementById('demo-user');
+      if (userBtn) {
+        userBtn.addEventListener('click', function () {
+          nmToast('Demo user login — opening the User Dashboard.', 'success');
+          setTimeout(function () { window.location.href = './dashboard/user-dashboard.html'; }, 700);
+        });
+      }
+
+      var adminBtn = document.getElementById('demo-admin');
+      if (adminBtn) {
+        adminBtn.addEventListener('click', function () {
+          nmToast('Demo admin login — opening the Admin Dashboard.', 'success');
+          setTimeout(function () { window.location.href = './dashboard/admin-dashboard.html'; }, 700);
+        });
+      }
+    
+      document.querySelectorAll('.theme-toggle-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          document.documentElement.classList.toggle('dark');
+        });
+      });
+
+      document.querySelectorAll('.rtl-toggle-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var isRTL = document.documentElement.dir === 'rtl';
+          document.documentElement.dir = isRTL ? 'ltr' : 'rtl';
+        });
+      });
+      
+    })();
+  </script>
+</body>
+</html>
+
+
