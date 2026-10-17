@@ -107,7 +107,7 @@ const NM_LISTINGS = [
   },
   {
     id: 3,
-    title: 'Queen Size Bed with Storage',
+    title: 'Queen Bed with Storage',
     category: 'Beds',
     price: 9500,
     location: 'Chennai',

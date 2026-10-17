@@ -25,6 +25,8 @@
   })();
 
   const isHome = currentPage === 'index.html' || currentPage === 'home2.html';
+    const isAbout = currentPage === 'about.html';
+
   const isBrowse = currentPage === 'browse.html' || currentPage === 'listing-details.html';
   const isSell = currentPage === 'sell-furniture.html';
   const isHow = currentPage === 'how-it-works.html';
@@ -90,15 +92,20 @@
           </div>
         </div>
       </li>
+          <li role="none">
+        <a role="menuitem" href="${url('about.html')}" class="flex items-center rounded-lg px-3 py-2.5 text-[15px] transition-colors ${isAbout ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isAbout ? 'aria-current="page"' : ''}>About</a>
+      </li>
       <li role="none">
         <a role="menuitem" href="${url('browse.html')}" class="flex items-center rounded-lg px-3 py-2.5 text-[15px] transition-colors ${isBrowse ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isBrowse ? 'aria-current="page"' : ''}>Browse</a>
       </li>
+    
       <li role="none">
         <a role="menuitem" href="${url('sell-furniture.html')}" class="flex items-center rounded-lg px-3 py-2.5 text-[15px] transition-colors ${isSell ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isSell ? 'aria-current="page"' : ''}>Sell-Furniture</a>
       </li>
       <li role="none">
         <a role="menuitem" href="${url('how-it-works.html')}" class="flex items-center rounded-lg px-3 py-2.5 text-[15px] transition-colors ${isHow ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isHow ? 'aria-current="page"' : ''}>How It Works</a>
       </li>
+    
       <li role="none">
         <a role="menuitem" href="${url('contact.html')}" class="flex items-center rounded-lg px-3 py-2.5 text-[15px] transition-colors ${isContact ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isContact ? 'aria-current="page"' : ''}>Contact </a>
       </li>
@@ -146,6 +153,8 @@
               <li><a href="${url('home2.html')}" class="${subCls(currentPage === 'home2.html', 'flex min-h-[48px] items-center rounded-lg px-3 text-[15px]')}"${ariaCurrent(currentPage === 'home2.html')}>Home 2</a></li>
             </ul>
           </li>
+                    <li><a href="${url('about.html')}" class="flex min-h-[52px] items-center rounded-xl px-4 text-base transition-colors ${isAbout ? mRowActive : mRowIdle}"${ariaCurrent(isAbout)}>About</a></li>
+
           <li><a href="${url('browse.html')}" class="flex min-h-[52px] items-center rounded-xl px-4 text-base transition-colors ${isBrowse ? mRowActive : mRowIdle}"${ariaCurrent(isBrowse)}>Browse</a></li>
           <li><a href="${url('sell-furniture.html')}" class="flex min-h-[52px] items-center rounded-xl px-4 text-base transition-colors ${isSell ? mRowActive : mRowIdle}"${ariaCurrent(isSell)}>Sell Your Furniture</a></li>
           <li><a href="${url('how-it-works.html')}" class="flex min-h-[52px] items-center rounded-xl px-4 text-base transition-colors ${isHow ? mRowActive : mRowIdle}"${ariaCurrent(isHow)}>How It Works</a></li>
