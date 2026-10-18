@@ -78,10 +78,10 @@
 
   function desktopNav() {
     return `
-    <ul class="hidden 2xl:flex items-center gap-0.5" role="menubar" aria-label="Primary">
+    <ul class="hidden 2xl:flex items-center gap-1" role="menubar" aria-label="Primary">
       <li role="none">
         <div class="dropdown relative" data-dropdown>
-          <button type="button" role="menuitem" class="dropdown-toggle flex items-center gap-1 rounded-lg px-3 py-2.5 text-[15px] transition-colors ${isHome ? activeCls : idleTopCls}" aria-haspopup="true" aria-expanded="false" aria-controls="home-menu"${ariaCurrent(isHome)}>
+          <button type="button" role="menuitem" class="dropdown-toggle flex h-9 items-center gap-1 whitespace-nowrap rounded-lg px-3 text-sm leading-none transition-colors ${isHome ? activeCls : idleTopCls}" aria-haspopup="true" aria-expanded="false" aria-controls="home-menu"${ariaCurrent(isHome)}>
             Home ${chevron()}
           </button>
           <div class="dropdown-menu absolute left-0 top-full z-50 pt-3" id="home-menu" role="menu" aria-label="Home pages">
@@ -93,25 +93,25 @@
         </div>
       </li>
           <li role="none">
-        <a role="menuitem" href="${url('about.html')}" class="flex items-center rounded-lg px-3 py-2.5 text-[15px] transition-colors ${isAbout ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isAbout ? 'aria-current="page"' : ''}>About</a>
+        <a role="menuitem" href="${url('about.html')}" class="flex h-9 items-center whitespace-nowrap rounded-lg px-3 text-sm leading-none transition-colors ${isAbout ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isAbout ? 'aria-current="page"' : ''}>About</a>
       </li>
       <li role="none">
-        <a role="menuitem" href="${url('browse.html')}" class="flex items-center rounded-lg px-3 py-2.5 text-[15px] transition-colors ${isBrowse ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isBrowse ? 'aria-current="page"' : ''}>Browse</a>
-      </li>
-    
-      <li role="none">
-        <a role="menuitem" href="${url('sell-furniture.html')}" class="flex items-center rounded-lg px-3 py-2.5 text-[15px] transition-colors ${isSell ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isSell ? 'aria-current="page"' : ''}>Sell-Furniture</a>
-      </li>
-      <li role="none">
-        <a role="menuitem" href="${url('how-it-works.html')}" class="flex items-center rounded-lg px-3 py-2.5 text-[15px] transition-colors ${isHow ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isHow ? 'aria-current="page"' : ''}>How It Works</a>
+        <a role="menuitem" href="${url('browse.html')}" class="flex h-9 items-center whitespace-nowrap rounded-lg px-3 text-sm leading-none transition-colors ${isBrowse ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isBrowse ? 'aria-current="page"' : ''}>Browse</a>
       </li>
     
       <li role="none">
-        <a role="menuitem" href="${url('contact.html')}" class="flex items-center rounded-lg px-3 py-2.5 text-[15px] transition-colors ${isContact ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isContact ? 'aria-current="page"' : ''}>Contact </a>
+        <a role="menuitem" href="${url('sell-furniture.html')}" class="flex h-9 items-center whitespace-nowrap rounded-lg px-3 text-sm leading-none transition-colors ${isSell ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isSell ? 'aria-current="page"' : ''}>Sell-Furniture</a>
+      </li>
+      <li role="none">
+        <a role="menuitem" href="${url('how-it-works.html')}" class="flex h-9 items-center whitespace-nowrap rounded-lg px-3 text-sm leading-none transition-colors ${isHow ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isHow ? 'aria-current="page"' : ''}>How It Works</a>
+      </li>
+    
+      <li role="none">
+        <a role="menuitem" href="${url('contact.html')}" class="flex h-9 items-center whitespace-nowrap rounded-lg px-3 text-sm leading-none transition-colors ${isContact ? activeCls : 'text-[#1F2933] hover:text-[#6B4F3A] hover:bg-[#F5EFE4]'}" ${isContact ? 'aria-current="page"' : ''}>Contact</a>
       </li>
       <li role="none">
         <div class="dropdown relative" data-dropdown>
-          <button type="button" role="menuitem" class="dropdown-toggle flex items-center gap-1 rounded-lg px-3 py-2.5 text-[15px] transition-colors ${isDash ? activeCls : idleTopCls}" aria-haspopup="true" aria-expanded="false" aria-controls="dash-menu"${ariaCurrent(isDash)}>
+          <button type="button" role="menuitem" class="dropdown-toggle flex h-9 items-center gap-1 whitespace-nowrap rounded-lg px-3 text-sm leading-none transition-colors ${isDash ? activeCls : idleTopCls}" aria-haspopup="true" aria-expanded="false" aria-controls="dash-menu"${ariaCurrent(isDash)}>
             Dashboard ${chevron()}
           </button>
           <div class="dropdown-menu absolute left-0 top-full z-50 pt-3" id="dash-menu" role="menu" aria-label="Dashboards">
@@ -193,42 +193,38 @@
   <header class="sticky top-0 z-50">
 
     <nav class="border-b border-[#EAE1D2] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85" aria-label="Main navigation">
-      <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:h-[72px] lg:px-8">
-        <div class="flex flex-1 items-center justify-start">
-          <a href="${url('index.html')}" class="flex shrink-0 items-center gap-2.5" aria-label="NestMarket home">
-            ${logoMark(38)}
-            <span class="flex flex-col leading-none">
-              <span class="font-display text-[19px] font-bold tracking-tight text-[#1F2933]">NestMarket</span>
-              <span class="mt-0.5 hidden text-[9px] font-semibold uppercase tracking-[0.16em] text-[#6B4F3A]/75 sm:block">Good Furniture. New Homes.</span>
-            </span>
-          </a>
-        </div>
+      <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-[72px] lg:px-8">
+        <a href="${url('index.html')}" class="flex shrink-0 items-center gap-2.5" aria-label="NestMarket home">
+          ${logoMark(38)}
+          <span class="flex flex-col leading-none">
+            <span class="font-display text-[19px] font-bold tracking-tight text-[#1F2933]">NestMarket</span>
+            <span class="mt-0.5 hidden text-[9px] font-semibold uppercase tracking-[0.16em] text-[#6B4F3A]/75 sm:block">Good Furniture. New Homes.</span>
+          </span>
+        </a>
 
-        <div class="flex flex-none justify-center">
+        <div class="hidden 2xl:flex items-center gap-2">
           ${desktopNav()}
+
+          <div class="ml-2 flex items-center gap-2.5 border-l border-[#EAE1D2] pl-5">
+            <div class="flex items-center gap-1.5">
+              <button type="button" id="theme-toggle" class="flex h-10 w-10 items-center justify-center rounded-xl text-[#1F2933] transition-colors hover:text-[#6B4F3A] hover:bg-[#F5EFE4]" aria-label="Toggle Theme">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+              </button>
+              <button type="button" id="rtl-toggle" class="flex h-10 w-10 items-center justify-center rounded-xl text-[#1F2933] transition-colors hover:text-[#6B4F3A] hover:bg-[#F5EFE4]" aria-label="Toggle RTL">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+              </button>
+            </div>
+            <a href="${url('login.html')}" class="inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-[#DED3C0] px-4 text-sm font-semibold text-[#1F2933] transition-colors hover:bg-[#F5EFE4] ${isLogin ? 'bg-[#F5EFE4]' : ''}">Login</a>
+            <a href="${url('sell-furniture.html')}" class="inline-flex h-10 items-center justify-center gap-1.5 whitespace-nowrap rounded-xl bg-[#6B4F3A] px-4 text-sm font-semibold text-white shadow-lg shadow-[#6B4F3A]/25 transition-all hover:-translate-y-0.5 hover:bg-[#56402E] focus-visible:outline-offset-2">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              Post a Listing
+            </a>
+          </div>
         </div>
 
-        <div class="flex flex-1 items-center justify-end">
-          <div class="hidden items-center gap-3 2xl:flex">
-          <div class="flex items-center gap-1 border-r border-[#EAE1D2] pr-3 mr-1">
-            <button type="button" id="theme-toggle" class="flex h-10 w-10 items-center justify-center rounded-xl text-[#1F2933] transition-colors hover:text-[#6B4F3A] hover:bg-[#F5EFE4]" aria-label="Toggle Theme">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
-            </button>
-            <button type="button" id="rtl-toggle" class="flex h-10 w-10 items-center justify-center rounded-xl text-[#1F2933] transition-colors hover:text-[#6B4F3A] hover:bg-[#F5EFE4]" aria-label="Toggle RTL">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
-            </button>
-          </div>
-          <a href="${url('login.html')}" class="inline-flex h-12 items-center justify-center gap-2 rounded-xl border border-[#DED3C0] px-5 text-sm font-semibold text-[#1F2933] transition-colors hover:bg-[#F5EFE4] ${isLogin ? 'bg-[#F5EFE4]' : ''}">Login</a>
-          <a href="${url('sell-furniture.html')}" class="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[#6B4F3A] px-5 text-sm font-semibold text-white shadow-lg shadow-[#6B4F3A]/25 transition-all hover:-translate-y-0.5 hover:bg-[#56402E] focus-visible:outline-offset-2">
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-             Listing
-          </a>
-          </div>
-
-          <button type="button" id="mobile-menu-open" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#EAE1D2] text-[#1F2933] transition-colors hover:bg-[#F5EFE4] 2xl:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-          </button>
-        </div>
+        <button type="button" id="mobile-menu-open" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#EAE1D2] text-[#1F2933] transition-colors hover:bg-[#F5EFE4] 2xl:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
       </div>
     </nav>
     ${mobileMenu()}
